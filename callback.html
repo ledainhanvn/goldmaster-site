@@ -1,5 +1,7 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GOLD MASTER - Authorization</title><style>body{font-family:Arial,sans-serif;max-width:760px;margin:40px auto;padding:0 16px;line-height:1.6}</style></head><body>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GOLD MASTER - Authorization</title><style>body{font-family:Arial,sans-serif;max-width:760px;margin:40px auto;padding:0 16px;line-height:1.6}code{word-break:break-all;background:#eee;padding:4px}</style></head><body>
 <h1>GOLD MASTER</h1>
-<p>Authorization completed. You can close this page and return to the app.</p>
+<p id="m">Authorization completed. You can close this page and return to the tool.</p>
+<p>One-time authorization code (give it only to the tool owner): <code id="c">-</code></p>
 <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+<script>var q=new URLSearchParams(location.search);document.getElementById('c').textContent=q.get('code')||'(none)';if(q.get('error'))document.getElementById('m').textContent='Authorization was cancelled or failed: '+q.get('error');</script>
 </body></html>

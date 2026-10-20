@@ -1,0 +1,14 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GOLD MASTER - Connect TikTok</title>
+<style>body{font-family:Arial,sans-serif;max-width:760px;margin:40px auto;padding:0 16px;line-height:1.6}button{background:#fe2c55;color:#fff;border:0;border-radius:8px;padding:14px 22px;font-size:18px;cursor:pointer}h1{color:#b8860b}</style></head><body>
+<h1>GOLD MASTER</h1>
+<p>Private tool of the channel owner. Connect your own TikTok account so the tool can post your gold price update videos to your own account.</p>
+<p>Permissions requested: basic profile (user.info.basic) and posting videos to your account (video.publish, video.upload). No data of other users is read.</p>
+<button id="b">Log in with TikTok</button>
+<p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+<script>
+document.getElementById('b').onclick=function(){
+ var s=Math.random().toString(36).slice(2);
+ try{sessionStorage.setItem('tt_state',s)}catch(e){}
+ location.href='https://www.tiktok.com/v2/auth/authorize/?client_key=sbawfjt2hmjznsewzc&scope=user.info.basic,video.upload,video.publish&response_type=code&redirect_uri='+encodeURIComponent('https://ledainhanvn.github.io/goldmaster-site/callback.html')+'&state='+s;
+};
+</script></body></html>
